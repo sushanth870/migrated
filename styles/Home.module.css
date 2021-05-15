@@ -1,0 +1,18 @@
+.root1 {
+  --border: #a59f9f;
+  --cherry: #ec1f28;
+  --bkwhite: #ffffff;
+  --default: #d3d3d3;
+  --black: #000;
+  --outline: #d3d3d3;
+  --needhelp: #2f80ed;
+  --success2: #27ae60;
+  --error2: #eb5757;
+  --warning2: #f2c94c;
+  --h12: #313131;
+  --h3s: #808080;
+  --body: #5a5a5a;
+  --pretitle: #a7a6a6;
+  --toast: #828282;
+  --content:#6B6E6F;
+}
