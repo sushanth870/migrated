@@ -8,7 +8,7 @@ export  const Landingpage2__title = styled.div`
     font-family: "Gordita";
   &::before{
     content: "";
-    background-image: url('../../public/images/Landing2//bk.jpg');
+    background-image: url('../../public/images/Landing2/bk.jpg');
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
@@ -123,3 +123,21 @@ export const Landingsearch__btn =styled.button`
 // color: var(--h3);
 // font-weight: 600;
 // `;
+
+export const Section=styled.section`
+  margin:30px 0;
+`
+
+export const SectionTitle =styled.div`
+  text-align:center;
+  font-size: 42px;
+  font-family: "Gordita";
+  color: var(--h3);
+  font-weight: 600;
+  margin:20px 0;
+  @media screen and (max-width: 540px) {
+    font-size: 32px;
+  }
+`
+export const SectionContent =styled.div`
+`

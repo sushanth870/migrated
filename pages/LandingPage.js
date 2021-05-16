@@ -14,15 +14,15 @@ import {Landingpage2__title ,
   Hashtag2,
   Title__landing__description,
   Landingpage2__title__heading,
-  Landing2__category__title,
   Search__landing,
   Searchbar__landing2,
   Focus_input,
   Landingsearch__btn,
-  Landingpage2__container
+  Landingpage2__container,
+  SectionTitle,
+  SectionContent,
+  Section
 } from "../styles/styled-components/LandingPageStyles";
-
-  
 // ------------------
 // import {API_ENDPOINT} from '../../AdminServices/baseURL'
 
@@ -108,73 +108,37 @@ const Landing2 = () => {
         <Brands />
         <hr className=""></hr>
 
-        <div  className="my-5">
-          <div className="row">
-            <div className="col-12">
-              <div className="text-center">
-                <h5 className=" my-5 ">
-                  <Landing2__category__title>
-                  Explore by category
-                  </Landing2__category__title>
-                </h5>
-              </div>
-            </div>
-          </div>
-          <CategoryCard data={internCategories} />
-        </div>
+
+        <Section >
+          <SectionTitle>Explore by category</SectionTitle>
+          <SectionContent>
+            <CategoryCard data={internCategories} />
+          </SectionContent>
+        </Section>
+
         <div className="my-5">
           <Content />
         </div>
 
-        <div className= "mt-5">
-          <div className="row">
-            <div className="col-12">
-              <div className="text-center">
-                <h5 className="my-5">
-                <Landing2__category__title>
-                  Featured Jobs
-                </Landing2__category__title>
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div className="container-fluid">
-            <FeaturedCards data={internships} />
-          </div>
-        </div>
+        <Section>
+          <SectionTitle>Featured Jobs</SectionTitle>
+          <SectionContent>
+             <FeaturedCards data={internships} />
+          </SectionContent>
+        </Section>
 
-        <div className= "mt-5">
-          <div className="row">
-            <div className="col-12">
-              <div className="text-center">
-                <h5 className="my-5">
-                <Landing2__category__title>
-                  Explore By Cities
-                </Landing2__category__title>
-                </h5>
-              </div>
-            </div>
-          </div>
+        <Section>
+          <SectionTitle>Explore By Cities</SectionTitle>
           <div className="container-fluid">
           <CityCards />
           </div>
-        </div>
+        </Section>
 
-        <div className="mt-4">
-          <div className="row">
-            <div className="col-12">
-              <div className="text-center">
-                <h5 className="my-5">
-                <Landing2__category__title>
-                  Quick Career Tips
-                </Landing2__category__title>
-                </h5>
-              </div>
-            </div>
-          </div>
+        <Section>
+          <SectionTitle>Quick Career Tips</SectionTitle>
 
           <CareerCard />
-        </div>
+        </Section>
 
         <div className=" mt-5" style={{ overflow: "hidden" }}>
           <Content2 />
