@@ -10,12 +10,14 @@ import FilterScheme from '../Components/JobGridPage/FilterScheme/FilterSchema';
 import Grid_Cards from '../Components/JobGridPage/GridCard/Grid_Cards';
 import List_Cards from '../Components/JobGridPage/ListCard/List_card';
 import {Filters} from '../utility/DummyData/JobGridData';
-// import {Link} from 'react-router-dom'
+
 import Job_Grid_Search_comp from '../Components/JobGridPage/Search/Job_grid_Search';
 import Updated_Header from'../Components/Header/Header';
 import stylesA from "../styles/Post_intern/Post_intern.module.css";
 import stylesB from "../styles/JobGrid/Job_Grid.module.css";
-// import AdminService from '../../AdminServices/AdminService';
+import { initializeStore } from "../redux/store";
+import {getInternships} from "../redux/actions/ssr.actions";
+
 const useStyles = makeStyles({
     'btn-red':{
         backgroundColor:'#ec1f28',
@@ -160,4 +162,11 @@ const Job_Grid = () => {
   );
 }
 
-export default Job_Grid
+export default Job_Grid;
+
+export async function getServerSideProps() {
+  const reduxStore = initializeStore();
+  const { dispatch } = reduxStore;
+  await dispatch(getInternships());
+  return { props: { initialReduxState: reduxStore.getState() } };
+}

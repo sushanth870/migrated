@@ -19,7 +19,10 @@ import {Landingpage2__title ,
   Searchbar__landing2,
   Focus_input,
   Landingsearch__btn,
-  Landingpage2__container} from "../styles/styled-components/LandingPageStyles";
+  Landingpage2__container
+} from "../styles/styled-components/LandingPageStyles";
+
+  
 // ------------------
 // import {API_ENDPOINT} from '../../AdminServices/baseURL'
 
