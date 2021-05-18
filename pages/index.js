@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import LandingPage from "./LandingPage"
+import LandingPage from "../Components/LandingPage/LandingPage"
 import { initializeStore } from "../redux/store";
 import { getCategories, getFeaturedJobs, getInternships} from "../redux/actions/ssr.actions";
 
-import JB from "./Job_Grid"
+import JB from "./jobgrid"
 export default function Home() {
   return (
     <div className={`${styles.App} ${styles.root1}`}>

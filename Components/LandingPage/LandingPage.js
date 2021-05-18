@@ -1,15 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 // import { useSelector , useDispatch } from 'react-redux'
-import Header from "../Components/Header/Header";
+import Header from "../Header/Header";
 import SearchIcon from "@material-ui/icons/Search";
-import Brands from "../Components/LandingPage/BrandsCard/Brands";
-import Content2 from "../Components/LandingPage/Content2/Content2";
-import CategoryCard from "../Components/LandingPage/CategoryCard/CategoryCard";
-import Content from "../Components/LandingPage/Content1/Content1";
-import FeaturedCards from "../Components/LandingPage/FeaturedCards/FeaturedCard";
-import CareerCard from "../Components/LandingPage/CareerCard/CareerCard";
-import CityCards from "../Components/LandingPage/CityCard/CityCard";
+import Brands from "./BrandsCard/Brands";
+import Content2 from "./Content2/Content2";
+import CategoryCard from "./CategoryCard/CategoryCard";
+import Content from "./Content1/Content1";
+import FeaturedCards from "./FeaturedCards/FeaturedCard";
+import CareerCard from "./CareerCard/CareerCard";
+import CityCards from "./CityCard/CityCard";
 import {Landingpage2__title , 
   Hashtag2,
   Title__landing__description,
@@ -22,7 +22,7 @@ import {Landingpage2__title ,
   SectionTitle,
   SectionContent,
   Section
-} from "../styles/styled-components/LandingPageStyles";
+} from "../../styles/styled-components/LandingPageStyles";
 // ------------------
 // import {API_ENDPOINT} from '../../AdminServices/baseURL'
 

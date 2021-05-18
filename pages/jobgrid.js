@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Job_Grid = () => {
+const jobgrid = () => {
   const [internships, setInternships] = useState([]);
   const MUIclasses = useStyles();
 
@@ -162,7 +162,7 @@ const Job_Grid = () => {
   );
 }
 
-export default Job_Grid;
+export default jobgrid;
 
 export async function getServerSideProps() {
   const reduxStore = initializeStore();

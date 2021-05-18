@@ -1,5 +1,6 @@
-import { authConstants } from "../actionTypes";
+import { authConstants,getData, } from "../actionTypes";
 import axios, { getCookie, setCookie } from "../helper_axios";
+import AdminService from "../../AdminServices/AdminService";
 
 export const signIn = (user) => {
   console.log("calling signIn action");
@@ -78,5 +79,28 @@ export const signUp = (user) => {
       });
       return { error: "User already exists !" };
     }
+  };
+};
+
+export const getUserData = () => {
+  return async (dispatch) => {
+    dispatch({ type: getData.GETDATA_REQUEST });
+    await AdminService.getUserProfile()
+      .then((res) => {
+        dispatch({
+          type: getData.GETDATA_SUCCESS,
+          payload: {
+            ...res.data.results[0],
+          },
+        });
+      })
+      .catch((err) => {
+        dispatch({
+          type: getData.GETDATA_FAILURE,
+          payload: {
+            message: "Error while accessing data!",
+          },
+        });
+      });
   };
 };
